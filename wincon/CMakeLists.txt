@@ -9,6 +9,7 @@ PROJECT(wincon VERSION "${PROJECT_VERSION}" LANGUAGES C)
 
 INCLUDE(project_common)
 
+if(BUILD_EXAMPLE)
 demo_app(../demos version)
 demo_app(../demos firework)
 demo_app(../demos ozdemo)
@@ -19,5 +20,6 @@ demo_app(../demos testcurs)
 demo_app(../demos tuidemo)
 demo_app(../demos worm)
 demo_app(../demos xmas)
+endif()
 
 SET(CPACK_COMPONENTS_ALL applications)
